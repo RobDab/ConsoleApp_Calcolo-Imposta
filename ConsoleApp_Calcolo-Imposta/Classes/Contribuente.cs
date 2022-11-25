@@ -25,10 +25,7 @@ namespace ConsoleApp_Calcolo_Imposta.Classes
             //la string MonthCode permette di confrontare il carattere relativo al mese
             //del codice fiscale e identificarlo grazie al suo indice in MonthCode > vedi riga 44
             String MonthCode = "ABCDEHLMPRST";
-            
-
-            // 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15
-            // D B B R R T 9 6 M 1 9  A  6  6  2  P
+           
             
             string year = $"{CF[6]}{CF[7]}";
             int Year = int.Parse(year);
