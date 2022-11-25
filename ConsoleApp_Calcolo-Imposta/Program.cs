@@ -55,7 +55,7 @@ namespace ConsoleApp_Calcolo_Imposta
                 if(answer == answerNeg)
                 {
                     Console.WriteLine("---------------------\n");
-                    Console.WriteLine(" THANKS FOR USING THIS APPLICATION! rate me on the appstore\n\n ___ Ending in 3s...\n");
+                    Console.WriteLine("  THANKS FOR USING THIS APPLICATION! Rate on the appstore\n\n ___ Ending in 3s...\n");
                     Console.WriteLine("---------------------\n");
                     Thread.Sleep(3500);
                     Environment.Exit(0);
@@ -63,7 +63,7 @@ namespace ConsoleApp_Calcolo_Imposta
             } while (answer != answerNeg);
         }
 
-        public static Contribuente GetInfo()
+        public static Contribuente GetInfo()  // -> Genera e restituisce un Contribuente con Proprietà già valorizzate
         {
             string cf;
 

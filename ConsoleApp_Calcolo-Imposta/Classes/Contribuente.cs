@@ -20,7 +20,9 @@ namespace ConsoleApp_Calcolo_Imposta.Classes
 
         public double GrossSalary { get; set; }
 
-        public Contribuente(string CF)
+        //Overload del costruttore per reperire BirthDate e Gender
+        //dal FiscalCode preso in input. 
+        public Contribuente(string CF)   
         {
             //la string MonthCode permette di confrontare il carattere relativo al mese
             //del codice fiscale e identificarlo grazie al suo indice in MonthCode > vedi riga 44
@@ -47,12 +49,15 @@ namespace ConsoleApp_Calcolo_Imposta.Classes
             int dayNum = int.Parse(day);
             int Day;
 
+            //Nel codice fiscale il genere è codificato nel giorno di nascita.
+            //Se (F) al giorno di nascita va sommato 40.
             if (dayNum<31) {
                 Day = dayNum;
                 Gender = "male";
             }
             else
             {
+                
                 Day = dayNum - 40;
                 Gender = "female";
             }
